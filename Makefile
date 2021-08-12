@@ -16,6 +16,8 @@
 
 SHELL=/bin/sh
 
+TARGET=x86_64-linux-gnu
+
 build: 
 	cd src && $(MAKE)
 
@@ -61,6 +63,19 @@ release: scripts/mkrelease
 
 scripts/mkrelease:
 	cd scripts && co mkrelease
+
+
+bin/$(TARGET)/myscript:
+	gcc script.c -o bin/$(TARGET)/myscript	
+
+/tmp/XXX:
+	touch /tmp/XXX
+
+/tmp/README:
+	cp README /tmp/README
+
+run: build /tmp/README bin/$(TARGET)/myscript /tmp/XXX
+	(cd bin/$(TARGET) && ./myscript)
 
 # XXX - . must be named lmbench for this to work
 shar:

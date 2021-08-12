@@ -1,0 +1,7 @@
+*.out *.d 
+
+scripts/build
+scripts/compiler
+scripts/make
+scripts/mkrelease
+scripts/os
