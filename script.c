@@ -14,19 +14,19 @@ int main(int ac, char **av)
         {
             if (strlen(benchmarks[i][1]) == 0) // To handle benchmarks without additional arguments
             {
-                char *temp[] = {benchmarks[i][0]};
+                char *temp[] = {benchmarks[i][0], NULL};
                 fprintf(stderr, "Start %s\n", benchmarks[i][0]);
                 execv(benchmarks[i][0], temp);
             }
             else if (strlen(benchmarks[i][2]) == 0) // To handle benchmarks without additional arguments
             {
-                char *temp[] = {benchmarks[i][0], benchmarks[i][1]};
+                char *temp[] = {benchmarks[i][0], benchmarks[i][1], NULL};
                 fprintf(stderr, "Start %s %s\n", benchmarks[i][0], benchmarks[i][1]);
                 execv(benchmarks[i][0], temp);
             }
             else if (strlen(benchmarks[i][3]) == 0) // To handle benchmarks without additional arguments
             {
-                char *temp[] = {benchmarks[i][0], benchmarks[i][1], benchmarks[i][2]};
+                char *temp[] = {benchmarks[i][0], benchmarks[i][1], benchmarks[i][2], NULL};
                 fprintf(stderr, "Start %s %s %s\n", benchmarks[i][0], benchmarks[i][1], benchmarks[i][2]);
                 execv(benchmarks[i][0], temp);
             }
