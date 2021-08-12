@@ -7,7 +7,7 @@
 
 int main(int ac, char **av)
 {
-    char *benchmarks[13][4] = {{"lat_syscall", "null", "", ""}, {"lat_syscall", "read", "", ""}, {"lat_syscall", "stat", "", ""}, {"lat_syscall", "fstat", "", ""}, {"lat_syscall", "open", "", ""}, {"lat_syscall", "write", "", ""}, {"lat_proc", "fork", "", ""}, {"lat_proc", "shell", "", ""}, {"lat_pipe", "", "", ""}, {"lat_ctx", "2", "", ""}, {"bw_pipe", "", "", ""}, {"bw_file_rd", "512", "open2close", "../../README"}, {"bw_file_rd", "512", "io_only", "../../README"}};
+    char *benchmarks[13][4] = {{"lat_syscall", "null", "", ""}, {"lat_syscall", "read", "", ""}, {"lat_syscall", "stat", "", ""}, {"lat_syscall", "fstat", "", ""}, {"lat_syscall", "open", "", ""}, {"lat_syscall", "write", "", ""}, {"lat_proc", "fork", "", ""}, {"lat_proc", "shell", "", ""}, {"lat_pipe", "", "", ""}, {"lat_ctx", "2", "", ""}, {"bw_pipe", "", "", ""}, {"bw_file_rd", "512", "open2close", "/tmp/README"}, {"bw_file_rd", "512", "io_only", "/tmp/README"}};
     for (int j=0; j<ITER; j++) {
 
         for (int i = 0; i < 13; i++)
